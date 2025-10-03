@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using gestorRoles;
 
 namespace gestorUsuarios
 {
@@ -24,5 +25,28 @@ namespace gestorUsuarios
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Navega al formulario de creación de rol
+            MainFrame.Navigate(new RolesPage());
+        }
+
+        private void Button_Click_User(object sender, RoutedEventArgs e)
+        {
+            // Navega al formulario de creación de usuario
+            MainFrame.Navigate(new UsuarioPage());
+        }
+        private void Button_Click_Empleado(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new EmpleadosPage());
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            // Este método se ejecuta después de cada navegación
+            // Puedes dejarlo vacío o usarlo para lógica adicional
+        }
     }
+
 }
